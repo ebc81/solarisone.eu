@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SolarisOne – Solare Energie auf einen Blick</title>
-  <meta name="description" content="SolarisOne – Das wandmontierte 4&quot;-Echtzeit-Energiefluss-Display für Ihre Photovoltaikanlage. ESP32-S3 · LVGL 9 · Fronius GEN24. Coming Soon." />
+  <meta name="description" content="SolarisOne – Das elegante Wanddisplay, das Ihnen auf einen Blick zeigt, wie viel Solarstrom Sie erzeugen, verbrauchen und sparen. Für Fronius GEN24. Coming Soon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -560,7 +560,7 @@
             </path>
           </svg>
         </div>
-        <p style="text-align:center;font-size:0.7rem;color:var(--muted);margin-top:0.75rem;">86 mm Panel</p>
+        <p style="text-align:center;font-size:0.7rem;color:var(--muted);margin-top:0.75rem;">Wandmontiertes 4&quot; Touch-Display</p>
       </div>
 
       <!-- Large animated energy diagram -->
@@ -694,13 +694,13 @@
       <div class="feature-card reveal">
         <div class="feature-icon" style="background:rgba(56,189,248,0.12);">🖼️</div>
         <h3><span data-lang="de" class="active">4″ IPS-Touchdisplay (480×480)</span><span data-lang="en">4″ IPS Touch Display (480×480)</span></h3>
-        <p><span data-lang="de" class="active">Gestochen scharfes 4-Zoll-IPS-LCD mit kapazitivem GT911-Touch – wandmontiert, stets sichtbar.</span><span data-lang="en">Crisp 4-inch IPS LCD with capacitive GT911 touch – wall-mounted, always visible.</span></p>
+        <p><span data-lang="de" class="active">Gestochen scharfes 4-Zoll-Farb-Touchdisplay mit reaktiver Berühroberfläche – wandmontiert, stets sichtbar, stets griffbereit.</span><span data-lang="en">Crisp 4-inch colour touch display with responsive touch surface – wall-mounted, always visible, always at hand.</span></p>
       </div>
 
       <div class="feature-card reveal">
         <div class="feature-icon" style="background:rgba(99,102,241,0.12);">🔌</div>
-        <h3><span data-lang="de" class="active">ESP32-S3-System</span><span data-lang="en">ESP32-S3 System</span></h3>
-        <p><span data-lang="de" class="active">Dual-Core ESP32-S3 mit 240 MHz, 16 MB Flash und 8 MB Octal-PSRAM – leistungsstark und energieeffizient.</span><span data-lang="en">Dual-Core ESP32-S3 at 240 MHz, 16 MB Flash and 8 MB Octal PSRAM – powerful and energy-efficient.</span></p>
+        <h3><span data-lang="de" class="active">Zuverlässig & reaktionsschnell</span><span data-lang="en">Reliable & responsive</span></h3>
+        <p><span data-lang="de" class="active">SolarisOne arbeitet rund um die Uhr – leise, energieeffizient und ohne zu ruckeln. Hochwertige Elektronik sorgt für jahrelangen, wartungsfreien Betrieb.</span><span data-lang="en">SolarisOne works around the clock – quietly, energy-efficiently and without stuttering. High-quality electronics ensure years of maintenance-free operation.</span></p>
       </div>
 
       <div class="feature-card reveal">
@@ -718,7 +718,7 @@
       <div class="feature-card reveal">
         <div class="feature-icon" style="background:rgba(251,146,60,0.12);">🌐</div>
         <h3><span data-lang="de" class="active">Kompatibel mit Fronius GEN24</span><span data-lang="en">Compatible with Fronius GEN24</span></h3>
-        <p><span data-lang="de" class="active">Liest Energiedaten direkt via lokaler Fronius Solar API (<code style="font-size:0.8em;color:var(--accent)">GetPowerFlowRealtimeData</code>) – ganz ohne Cloud.</span><span data-lang="en">Reads energy data directly via the local Fronius Solar API (<code style="font-size:0.8em;color:var(--accent)">GetPowerFlowRealtimeData</code>) – no cloud required.</span></p>
+        <p><span data-lang="de" class="active">SolarisOne kommuniziert direkt mit Ihrem Fronius Wechselrichter im Heimnetz – lokal, ohne Cloud, ohne Weitergabe Ihrer Daten an Dritte.</span><span data-lang="en">SolarisOne communicates directly with your Fronius inverter on your home network – locally, without cloud, without sharing your data with third parties.</span></p>
       </div>
 
     </div>
@@ -742,21 +742,21 @@
         <div class="step-num">01</div>
         <div class="step-icon">📡</div>
         <h3><span data-lang="de" class="active">Daten abrufen</span><span data-lang="en">Fetch Data</span></h3>
-        <p><span data-lang="de" class="active">Der ESP32-S3 ruft über WLAN alle 10 Sekunden Leistungsdaten vom Fronius GEN24 Wechselrichter ab – lokal, ohne Cloud.</span><span data-lang="en">The ESP32-S3 fetches power data from the Fronius GEN24 inverter over Wi-Fi every 10 seconds – locally, no cloud.</span></p>
+        <p><span data-lang="de" class="active">SolarisOne verbindet sich über Ihr WLAN alle 10 Sekunden mit Ihrem Fronius Wechselrichter und holt die aktuellen Energiedaten – lokal, ohne Cloud, ohne Wartezeit.</span><span data-lang="en">SolarisOne connects via your Wi-Fi every 10 seconds to your Fronius inverter and fetches the latest energy data – locally, no cloud, no waiting.</span></p>
       </div>
 
       <div class="step-card reveal">
         <div class="step-num">02</div>
         <div class="step-icon">⚙️</div>
-        <h3><span data-lang="de" class="active">Berechnen &amp; verarbeiten</span><span data-lang="en">Calculate &amp; Process</span></h3>
-        <p><span data-lang="de" class="active">Die Firmware berechnet Energieflüsse zwischen PV, Batterie, Haus und Netz aus den Rohdaten.</span><span data-lang="en">The firmware calculates energy flows between PV, battery, house and grid from raw data.</span></p>
+        <h3><span data-lang="de" class="active">Sofort auswerten</span><span data-lang="en">Evaluate instantly</span></h3>
+        <p><span data-lang="de" class="active">SolarisOne erkennt automatisch, wie die Energie gerade zwischen Solar, Batterie, Haus und Netz fließt – und bereitet alles übersichtlich auf.</span><span data-lang="en">SolarisOne automatically recognises how energy is currently flowing between solar, battery, house and grid – and presents everything clearly.</span></p>
       </div>
 
       <div class="step-card reveal">
         <div class="step-num">03</div>
         <div class="step-icon">🖥️</div>
         <h3><span data-lang="de" class="active">Visualisieren</span><span data-lang="en">Visualise</span></h3>
-        <p><span data-lang="de" class="active">LVGL 9 rendert die Energieflüsse als animiertes Diagramm auf dem 4″-IPS-Display – flüssig und gestochen scharf.</span><span data-lang="en">LVGL 9 renders the energy flows as an animated diagram on the 4″ IPS display – smooth and crisp.</span></p>
+        <p><span data-lang="de" class="active">Das Display zeigt die Energieflüsse als klares, animiertes Diagramm – flüssig, scharf und sofort verständlich. Kein Ablesen, kein Interpretieren.</span><span data-lang="en">The display shows energy flows as a clear, animated diagram – smooth, crisp and immediately understandable. No reading, no interpreting.</span></p>
       </div>
 
       <div class="step-card reveal">
@@ -803,8 +803,8 @@
 
       <div class="use-card reveal">
         <div class="use-card-icon">🧑‍💻</div>
-        <h3><span data-lang="de" class="active">DIY &amp; Maker</span><span data-lang="en">DIY &amp; Makers</span></h3>
-        <p><span data-lang="de" class="active">Offene Firmware auf Basis von ESP32 – ideal für Technikbegeisterte, die ihr System anpassen möchten.</span><span data-lang="en">Open firmware based on ESP32 – ideal for tech enthusiasts who want to customise their system.</span></p>
+        <h3><span data-lang="de" class="active">Technikaffine Hausbesitzer</span><span data-lang="en">Tech-minded homeowners</span></h3>
+        <p><span data-lang="de" class="active">Sie möchten Ihre Anlage genau verstehen? SolarisOne gibt Ihnen detaillierte Einblicke in jeden Energiefluss – verständlich aufbereitet, ohne Umwege.</span><span data-lang="en">Want to understand your system in detail? SolarisOne gives you detailed insights into every energy flow – presented clearly, without detours.</span></p>
       </div>
 
       <div class="use-card reveal">
@@ -823,50 +823,50 @@
   </div>
 </section>
 
-<!-- ═══════════════════════════ SPECS ════════════════════════════════════════ -->
+<!-- ═══════════════════════════ AT A GLANCE ══════════════════════════════════ -->
 <section class="section" id="specs">
   <div class="container">
-    <span class="section-tag" data-lang="de">Technische Daten</span>
-    <span class="section-tag" data-lang="en">Technical Specs</span>
+    <span class="section-tag text-center" data-lang="de" style="display:block">Auf einen Blick</span>
+    <span class="section-tag text-center" data-lang="en">At a glance</span>
 
-    <h2 class="section-head reveal">
-      <span data-lang="de" class="active">Technische Details</span>
-      <span data-lang="en">Technical Details</span>
+    <h2 class="section-head text-center reveal">
+      <span data-lang="de" class="active">Was Sie wissen müssen</span>
+      <span data-lang="en">What you need to know</span>
     </h2>
 
     <table class="specs-table reveal">
       <tbody>
         <tr>
-          <th><span data-lang="de" class="active">Mikrocontroller</span><span data-lang="en">Microcontroller</span></th>
-          <td>ESP32 (Dual-Core, 240 MHz)</td>
+          <th><span data-lang="de" class="active">Display</span><span data-lang="en">Display</span></th>
+          <td><span data-lang="de" class="active">4&quot; Farb-Touchdisplay, gestochen scharf</span><span data-lang="en">4&quot; colour touch display, crystal-clear</span></td>
         </tr>
         <tr>
-          <th><span data-lang="de" class="active">Konnektivität</span><span data-lang="en">Connectivity</span></th>
-          <td>Wi-Fi 802.11 b/g/n</td>
+          <th><span data-lang="de" class="active">Verbindung</span><span data-lang="en">Connection</span></th>
+          <td><span data-lang="de" class="active">WLAN – kabellos, in Ihr Heimnetz integriert</span><span data-lang="en">Wi-Fi – wireless, integrated in your home network</span></td>
         </tr>
         <tr>
           <th><span data-lang="de" class="active">Kompatibilität</span><span data-lang="en">Compatibility</span></th>
-          <td>Fronius GEN24 (local API)</td>
+          <td><span data-lang="de" class="active">Fronius GEN24 Wechselrichter (lokal, keine Cloud)</span><span data-lang="en">Fronius GEN24 inverter (local, no cloud)</span></td>
         </tr>
         <tr>
-          <th><span data-lang="de" class="active">Formfaktor</span><span data-lang="en">Form factor</span></th>
-          <td><span data-lang="de" class="active">86 mm Wandpanel</span><span data-lang="en">86 mm wall panel</span></td>
+          <th><span data-lang="de" class="active">Montage</span><span data-lang="en">Installation</span></th>
+          <td><span data-lang="de" class="active">Wandmontage – kompakt &amp; stilvoll</span><span data-lang="en">Wall-mounted – compact &amp; stylish</span></td>
         </tr>
         <tr>
           <th><span data-lang="de" class="active">Stromversorgung</span><span data-lang="en">Power supply</span></th>
-          <td>5 V USB-C / PoE (geplant)</td>
-        </tr>
-        <tr>
-          <th><span data-lang="de" class="active">Firmware</span><span data-lang="en">Firmware</span></th>
-          <td>ESP32 Arduino / PlatformIO</td>
+          <td>USB-C</td>
         </tr>
         <tr>
           <th><span data-lang="de" class="active">Aktualisierungsrate</span><span data-lang="en">Update rate</span></th>
-          <td><span data-lang="de" class="active">~ 5 Sekunden</span><span data-lang="en">~ 5 seconds</span></td>
+          <td><span data-lang="de" class="active">Alle 10 Sekunden – immer aktuell</span><span data-lang="en">Every 10 seconds – always current</span></td>
         </tr>
         <tr>
-          <th><span data-lang="de" class="active">Status</span><span data-lang="en">Status</span></th>
-          <td><span data-lang="de" class="active">In Entwicklung – Coming Soon</span><span data-lang="en">In development – Coming Soon</span></td>
+          <th><span data-lang="de" class="active">Sprachen</span><span data-lang="en">Languages</span></th>
+          <td><span data-lang="de" class="active">Deutsch &amp; Englisch (umschaltbar)</span><span data-lang="en">German &amp; English (switchable)</span></td>
+        </tr>
+        <tr>
+          <th><span data-lang="de" class="active">Abo / Cloud</span><span data-lang="en">Subscription / Cloud</span></th>
+          <td><span data-lang="de" class="active">Keines – Einmalpreis, kein Abo</span><span data-lang="en">None – one-time price, no subscription</span></td>
         </tr>
       </tbody>
     </table>
@@ -884,13 +884,13 @@
       </div>
 
       <h2>
-        <span data-lang="de" class="active">SolarisOne kommt bald</span>
-        <span data-lang="en">SolarisOne Is Coming Soon</span>
+        <span data-lang="de" class="active">SolarisOne kommt bald –<br>seien Sie dabei.</span>
+        <span data-lang="en">SolarisOne is coming soon –<br>be first in line.</span>
       </h2>
 
       <p style="margin-bottom:2rem;">
-        <span data-lang="de" class="active">Das Produkt befindet sich derzeit in der Entwicklung. Tragen Sie sich ein, um als Erster benachrichtigt zu werden, wenn SolarisOne verfügbar ist.</span>
-        <span data-lang="en">The product is currently in development. Sign up to be the first to know when SolarisOne becomes available.</span>
+        <span data-lang="de" class="active">Tragen Sie sich jetzt in die Warteliste ein. Wir benachrichtigen Sie als Erstes, sobald SolarisOne verfügbar ist – und Sie profitieren vom Early-Bird-Preis.</span>
+        <span data-lang="en">Join the waiting list now. We'll notify you first as soon as SolarisOne is available – and you'll benefit from the early-bird price.</span>
       </p>
 
       <form class="signup-form" onsubmit="handleSignup(event)">
@@ -926,27 +926,27 @@
 <section class="section" id="about">
   <div class="container">
     <div class="about-inner reveal">
-      <div class="about-avatar" aria-hidden="true">👨‍💻</div>
+      <div class="about-avatar" aria-hidden="true">☀️</div>
       <div class="about-text">
-        <span class="section-tag" data-lang="de">Über das Projekt</span>
-        <span class="section-tag" data-lang="en">About the Project</span>
+        <span class="section-tag" data-lang="de" style="display:block">Über SolarisOne</span>
+        <span class="section-tag" data-lang="en">About SolarisOne</span>
         <h2>
-          <span data-lang="de" class="active">Gebaut von einem Energieenthusiasten</span>
-          <span data-lang="en">Built by an Energy Enthusiast</span>
+          <span data-lang="de" class="active">Entstanden aus eigener Erfahrung.</span>
+          <span data-lang="en">Born from personal experience.</span>
         </h2>
         <p>
-          <span data-lang="de" class="active">SolarisOne entstand aus dem persönlichen Wunsch, den Energiefluss einer eigenen PV-Anlage (Fronius GEN24) einfach und elegant darzustellen – ohne auf eine App oder ein Tablet angewiesen zu sein. Das Projekt kombiniert Hardware-Entwicklung, Embedded-Firmware und UI-Design zu einem kompakten Wandgerät.</span>
-          <span data-lang="en">SolarisOne was born from a personal desire to display the energy flow of a private PV system (Fronius GEN24) simply and elegantly – without relying on an app or tablet. The project combines hardware development, embedded firmware and UI design into a compact wall device.</span>
+          <span data-lang="de" class="active">Wir haben selbst eine PV-Anlage mit Fronius Wechselrichter – und wir wollten endlich ohne App wissen, was gerade passiert. So entstand SolarisOne: ein Produkt, das wir selbst jeden Tag nutzen wollen. Klar, schön, immer sichtbar.</span>
+          <span data-lang="en">We have our own PV system with a Fronius inverter – and we finally wanted to know what's happening without opening an app. That's how SolarisOne came about: a product we want to use ourselves every day. Clear, beautiful, always visible.</span>
         </p>
         <br/>
         <p>
-          <span data-lang="de" class="active">Dies ist kein Open-Source-Projekt. Das Ziel ist es, ein fertiges, sofort einsatzbereites Produkt für Hausbesitzer mit Photovoltaikanlage anzubieten.</span>
-          <span data-lang="en">This is not an open-source project. The goal is to offer a finished, ready-to-use product for homeowners with photovoltaic systems.</span>
+          <span data-lang="de" class="active">SolarisOne ist kein Open-Source-Bastelprojekt. Es ist ein fertiges, hochwertiges Produkt – entwickelt von <strong style="color:var(--text)">ebctech.eu</strong> für Menschen, die das Beste aus ihrer Solaranlage herausholen wollen.</span>
+          <span data-lang="en">SolarisOne is not an open-source hobby project. It is a finished, high-quality product – developed by <strong style="color:var(--text)">ebctech.eu</strong> for people who want to get the most out of their solar system.</span>
         </p>
         <br/>
-        <a href="https://github.com/ebc81" class="github-link" target="_blank" rel="noopener noreferrer">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.26c0 4.54 2.87 8.39 6.84 9.75.5.09.68-.22.68-.49 0-.24-.01-.87-.01-1.71-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.49-1.11-1.49-.91-.64.07-.63.07-.63 1 .07 1.53 1.06 1.53 1.06.89 1.57 2.34 1.12 2.91.86.09-.67.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05A9.38 9.38 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.38-.01 2.49-.01 2.83 0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2Z"/></svg>
-          GitHub: ebc81
+        <a href="mailto:info@solarisone.eu" class="github-link">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          info@solarisone.eu
         </a>
       </div>
     </div>
@@ -958,7 +958,7 @@
   <div class="container">
     <div class="footer-inner">
       <p class="footer-copy">
-        © 2025 SolarisOne –
+        © 2026 ebctech.eu · SolarisOne ·
         <span data-lang="de" class="active">Alle Rechte vorbehalten.</span>
         <span data-lang="en">All rights reserved.</span>
       </p>
@@ -968,7 +968,10 @@
           <span data-lang="de" class="active">Kontakt</span>
           <span data-lang="en">Contact</span>
         </a></li>
-        <li><a href="https://github.com/ebc81" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="mailto:legal@ebctech.eu">
+          <span data-lang="de" class="active">Rechtliches</span>
+          <span data-lang="en">Legal</span>
+        </a></li>
         <li>
           <div class="lang-switcher">
             <button class="lang-btn active" onclick="setLang('de')" data-lang-target="de">🇩🇪 DE</button>
