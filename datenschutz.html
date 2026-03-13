@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datenschutzerklärung – SolarisOne</title>
+  <meta name="description" content="Datenschutzerklärung von SolarisOne gemäß DSGVO und österreichischem DSG." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="./fonts.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <style>
+    /* ── Seiten-spezifische Stile (ident mit impressum.html) ── */
+    .legal-hero {
+      padding: 8rem 1.5rem 3.5rem;
+      text-align: center;
+      background:
+        radial-gradient(ellipse 70% 50% at 50% 0%, rgba(245,158,11,0.08) 0%, transparent 65%),
+        var(--bg);
+    }
+    .legal-hero h1 { margin-bottom: 0.75rem; }
+    .legal-hero .sub {
+      max-width: 520px; margin: 0 auto;
+      font-size: 1rem; color: var(--muted);
+    }
+
+    .legal-body {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 6rem;
+    }
+
+    .legal-section {
+      margin-bottom: 3rem;
+    }
+    .legal-section:last-child { margin-bottom: 0; }
+
+    .legal-section h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+      letter-spacing: -0.01em;
+    }
+
+    .legal-section h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.25rem 0 0.5rem;
+    }
+
+    .legal-section p,
+    .legal-section address {
+      font-size: 0.95rem;
+      line-height: 1.8;
+      color: var(--muted);
+      font-style: normal;
+      margin-bottom: 0.6rem;
+    }
+    .legal-section p:last-child { margin-bottom: 0; }
+
+    .legal-section a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .legal-section a:hover { text-decoration: underline; }
+
+    .legal-section strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .legal-section ul {
+      padding-left: 1.4rem;
+      margin: 0.5rem 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .legal-section ul li { margin-bottom: 0.3rem; }
+
+    .legal-badge {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 2.5rem;
+      background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.25);
+      color: #818cf8; padding: 0.3rem 0.9rem; border-radius: 9999px;
+      font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .back-link {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      color: var(--muted); text-decoration: none; font-size: 0.88rem;
+      transition: color 0.2s; margin-bottom: 2.5rem;
+    }
+    .back-link:hover { color: var(--text); }
+
+    .legal-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-top: 0.75rem;
+      font-size: 0.93rem;
+      line-height: 1.75;
+      color: var(--muted);
+    }
+    .legal-card strong { color: var(--text); }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .right-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+    }
+    .right-card strong {
+      display: block;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .right-card p {
+      font-size: 0.87rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 3rem;
+    }
+    .toc p {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.6rem;
+    }
+    .toc ol {
+      padding-left: 1.4rem;
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+    .toc ol li a {
+      color: var(--accent2);
+      text-decoration: none;
+    }
+    .toc ol li a:hover { text-decoration: underline; }
+
+    .last-updated {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-bottom: 2.5rem;
+      display: block;
+    }
+
+    .highlight-box {
+      background: rgba(245,158,11,0.06);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      margin-top: 0.75rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── Nav ─────────────────────────────────────────────────── -->
+<nav>
+  <div class="nav-inner">
+    <a href="./index.html" class="nav-logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+      </svg>
+      SolarisOne
+    </a>
+    <div class="theme-switcher" style="margin-left:auto;">
+      <button class="theme-btn active" type="button" onclick="setTheme('light')" data-theme-target="light" aria-label="Helles Theme">☀️</button>
+      <button class="theme-btn" type="button" onclick="setTheme('dark')" data-theme-target="dark" aria-label="Dunkles Theme">🌙</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── Hero ─────────────────────────────────────────────────── -->
+<div class="legal-hero">
+  <div class="legal-badge">Rechtliches</div>
+  <h1>Datenschutzerklärung</h1>
+  <p class="sub">Gemäß Art. 13 &amp; 14 DSGVO, DSG (österreichisches Datenschutzgesetz) und ECG</p>
+</div>
+
+<!-- ─── Inhalt ────────────────────────────────────────────────── -->
+<div class="legal-body">
+
+  <a href="./index.html" class="back-link">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Zurück zur Startseite
+  </a>
+
+  <span class="last-updated">Stand: März 2026 · Diese Datenschutzerklärung wird bei Bedarf aktualisiert.</span>
+
+  <!-- Inhaltsverzeichnis -->
+  <div class="toc">
+    <p>Inhaltsverzeichnis</p>
+    <ol>
+      <li><a href="#verantwortlicher">Verantwortlicher</a></li>
+      <li><a href="#grundsaetze">Grundsätze der Datenverarbeitung</a></li>
+      <li><a href="#hosting">Hosting &amp; Server-Log-Dateien</a></li>
+      <li><a href="#warteliste">Warteliste (Interessenten-Anmeldung)</a></li>
+      <li><a href="#kontakt">Kontakt per E-Mail</a></li>
+      <li><a href="#technisch">Technisch notwendige Speicherung (localStorage)</a></li>
+      <li><a href="#auftragsverarbeiter">Auftragsverarbeiter</a></li>
+      <li><a href="#drittlaender">Übermittlung in Drittländer</a></li>
+      <li><a href="#rechte">Ihre Rechte als betroffene Person</a></li>
+      <li><a href="#behoerde">Beschwerderecht bei der Aufsichtsbehörde</a></li>
+    </ol>
+  </div>
+
+  <!-- 1. Verantwortlicher -->
+  <div class="legal-section" id="verantwortlicher">
+    <h2>1. Verantwortlicher</h2>
+    <p>Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und des österreichischen Datenschutzgesetzes (DSG) ist:</p>
+    <div class="legal-card">
+      <strong>Ing. Christian Ebner</strong><br />
+      ebctech.eu / SolarisOne<br />
+      Parkstraße 21/12<br />
+      4310 Mauthausen<br />
+      Österreich<br /><br />
+      E-Mail: <a href="mailto:info@ebctech.eu">info@ebctech.eu</a>
+    </div>
+    <p>Ein Datenschutzbeauftragter ist gemäß Art. 37 DSGVO nicht zu benennen, da es sich um einen Einzelunternehmer handelt, dessen Kerntätigkeit keine umfangreiche Verarbeitung besonderer Kategorien von Daten oder keine umfangreiche regelmäßige Beobachtung von Personen umfasst.</p>
+  </div>
+
+  <!-- 2. Grundsätze -->
+  <div class="legal-section" id="grundsaetze">
+    <h2>2. Grundsätze der Datenverarbeitung</h2>
+    <p>Personenbezogene Daten werden nur erhoben und verarbeitet, wenn:</p>
+    <ul>
+      <li>Sie uns Ihre ausdrückliche <strong>Einwilligung</strong> erteilt haben (Art. 6 Abs. 1 lit. a DSGVO),</li>
+      <li>die Verarbeitung zur Erfüllung eines <strong>Vertrags</strong> oder vorvertraglicher Maßnahmen erforderlich ist (Art. 6 Abs. 1 lit. b DSGVO),</li>
+      <li>eine <strong>rechtliche Verpflichtung</strong> besteht (Art. 6 Abs. 1 lit. c DSGVO), oder</li>
+      <li>ein <strong>berechtigtes Interesse</strong> vorliegt (Art. 6 Abs. 1 lit. f DSGVO).</li>
+    </ul>
+    <p>Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.</p>
+  </div>
+
+  <!-- 3. Hosting -->
+  <div class="legal-section" id="hosting">
+    <h2>3. Hosting &amp; Server-Log-Dateien</h2>
+    <h3>Hosting-Anbieter</h3>
+    <p>Diese Website wird auf einem virtuellen Server (VPS) bei folgendem Anbieter betrieben:</p>
+    <div class="legal-card">
+      <strong>IONOS SE</strong><br />
+      Elgendorfer Str. 57<br />
+      56410 Montabaur<br />
+      Deutschland<br />
+      <a href="https://www.ionos.de" target="_blank" rel="noopener noreferrer">www.ionos.de</a>
+    </div>
+    <p>Mit IONOS besteht ein Auftragsverarbeitungsvertrag (AVV) gemäß Art. 28 DSGVO. Der Server und damit die verarbeiteten Daten befinden sich innerhalb der Europäischen Union (Deutschland).</p>
+
+    <h3>Server-Log-Dateien</h3>
+    <p>Beim Aufruf dieser Website erhebt und speichert der Hosting-Anbieter (IONOS) automatisch Informationen in sogenannten Server-Log-Dateien. Diese können umfassen:</p>
+    <ul>
+      <li>IP-Adresse des anfragenden Geräts</li>
+      <li>Datum und Uhrzeit des Abrufs</li>
+      <li>Name und URL der abgerufenen Datei</li>
+      <li>Übertragene Datenmenge</li>
+      <li>Betriebssystem und Browser des anfragenden Geräts</li>
+      <li>HTTP-Statuscode</li>
+    </ul>
+    <p>
+      <strong>Zweck:</strong> Sicherstellung des stabilen Betriebs, Fehleranalyse und Abwehr von Angriffen.<br />
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren Serverbetrieb).<br />
+      <strong>Speicherdauer:</strong> Diese Daten werden nach spätestens 30 Tagen automatisch gelöscht, soweit keine konkreten Sicherheitsvorfälle eine längere Aufbewahrung erfordern.<br />
+      <strong>Weitergabe an Dritte:</strong> Nein, außer im Falle von Sicherheitsvorfällen an zuständige Behörden.
+    </p>
+    <div class="highlight-box">
+      ℹ️ Die IP-Adresse wird nicht an uns (den Verantwortlichen) weitergegeben; sie verbleibt beim Hosting-Anbieter IONOS im Rahmen der Infrastrukturprotokollierung.
+    </div>
+  </div>
+
+  <!-- 4. Warteliste -->
+  <div class="legal-section" id="warteliste">
+    <h2>4. Warteliste – Interessenten-Anmeldung</h2>
+    <p>Auf unserer Website besteht die Möglichkeit, sich für eine Warteliste (Produkt-Vorankündigung) anzumelden.</p>
+
+    <h3>Erhobene Daten</h3>
+    <ul>
+      <li>E-Mail-Adresse</li>
+      <li>Zeitpunkt der Anmeldung und Einwilligung</li>
+      <li>Sprache der Benutzeroberfläche zum Zeitpunkt der Anmeldung</li>
+      <li>IP-Adresse (zur Spam-Abwehr, nur serverseitig, nicht dauerhaft gespeichert)</li>
+    </ul>
+
+    <h3>Zweck der Verarbeitung</h3>
+    <p>Die Daten werden ausschließlich verwendet, um Sie über die Verfügbarkeit des Produkts SolarisOne sowie über etwaige Frühbucher-Konditionen zu informieren. Eine Weitergabe an Dritte oder eine Nutzung zu anderen Zwecken erfolgt nicht.</p>
+
+    <h3>Rechtsgrundlage</h3>
+    <p>Art. 6 Abs. 1 lit. a DSGVO – Ihre freiwillig erteilte, ausdrückliche <strong>Einwilligung</strong> im Rahmen des Anmeldeformulars (Double-Opt-In-Verfahren).</p>
+
+    <h3>Double-Opt-In-Verfahren</h3>
+    <p>Nach Ihrer Anmeldung erhalten Sie eine Bestätigungs-E-Mail. Ihre E-Mail-Adresse wird erst dann in die Warteliste aufgenommen, wenn Sie den enthaltenen Bestätigungslink anklicken. Damit stellen wir sicher, dass die Anmeldung tatsächlich von Ihnen vorgenommen wurde.</p>
+
+    <h3>Speicherdauer</h3>
+    <p>Ihre E-Mail-Adresse wird gespeichert, bis einer der folgenden Zeitpunkte eintritt – je nachdem, was <strong>früher</strong> eintritt:</p>
+    <ul>
+      <li>30 Tage nach dem Produktlaunch von SolarisOne, oder</li>
+      <li>spätestens nach <strong>2 Jahren</strong> ab dem Zeitpunkt der Anmeldung.</li>
+    </ul>
+    <p>Nach Ablauf der Speicherfrist werden Ihre Daten vollständig und unwiderruflich gelöscht.</p>
+
+    <h3>Widerruf der Einwilligung</h3>
+    <p>
+      Sie können Ihre Einwilligung jederzeit und ohne Angabe von Gründen mit Wirkung für die Zukunft widerrufen. Senden Sie dazu eine formlose E-Mail an:
+      <a href="mailto:info@ebctech.eu">info@ebctech.eu</a>.<br />
+      Die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung bleibt unberührt.
+    </p>
+
+    <h3>Versand der Bestätigungs- und Benachrichtigungs-E-Mails</h3>
+    <p>E-Mails werden über den eigenen VPS-Server (IONOS SE, Deutschland) mithilfe der PHP-Mailfunktion versendet. Es wird kein externer E-Mail-Marketing-Dienst verwendet. Der Versand erfolgt ausschließlich über Server innerhalb der EU.</p>
+  </div>
+
+  <!-- 5. Kontakt per E-Mail -->
+  <div class="legal-section" id="kontakt">
+    <h2>5. Kontakt per E-Mail</h2>
+    <p>
+      Wenn Sie uns per E-Mail kontaktieren (z. B. an <a href="mailto:info@ebctech.eu">info@ebctech.eu</a>), werden die in Ihrer E-Mail enthaltenen personenbezogenen Daten (insbesondere Name, E-Mail-Adresse und Nachrichteninhalt) zum Zweck der Bearbeitung Ihrer Anfrage gespeichert und verarbeitet.
+    </p>
+    <p>
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der Bearbeitung von Anfragen) bzw. Art. 6 Abs. 1 lit. b DSGVO bei vorvertraglichen Maßnahmen.<br />
+      <strong>Speicherdauer:</strong> Die Daten werden gelöscht, sobald die Anfrage abschließend beantwortet ist und keine gesetzlichen Aufbewahrungspflichten entgegenstehen, spätestens nach 3 Jahren.<br />
+      <strong>Weitergabe:</strong> Keine Weitergabe an Dritte.
+    </p>
+  </div>
+
+  <!-- 6. localStorage -->
+  <div class="legal-section" id="technisch">
+    <h2>6. Technisch notwendige Speicherung (localStorage)</h2>
+    <p>
+      Diese Website verwendet die Browser-Technologie <strong>localStorage</strong> ausschließlich, um Ihre Benutzereinstellung zum <strong>Farbschema</strong> (helles oder dunkles Design) lokal auf Ihrem Gerät zu speichern. Dabei werden keine personenbezogenen Daten verarbeitet oder an unseren Server übermittelt.
+    </p>
+    <p>
+      <strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer komfortablen Nutzung) – da diese Speicherung rein lokal auf Ihrem Gerät erfolgt und keinerlei Tracking oder Profilbildung dient, ist eine Einwilligung nicht erforderlich.<br />
+      <strong>Löschung:</strong> Sie können diese Einstellung jederzeit über die Browser-Einstellungen unter „Websitedaten löschen" entfernen.
+    </p>
+    <p>Es werden auf dieser Website <strong>keine Cookies gesetzt</strong> und kein Tracking betrieben.</p>
+  </div>
+
+  <!-- 7. Auftragsverarbeiter -->
+  <div class="legal-section" id="auftragsverarbeiter">
+    <h2>7. Auftragsverarbeiter (Art. 28 DSGVO)</h2>
+    <p>Wir setzen folgende Auftragsverarbeiter ein, mit denen Auftragsverarbeitungsverträge (AVV) gemäß Art. 28 DSGVO bestehen:</p>
+    <div class="legal-card">
+      <strong>IONOS SE</strong> – Hosting &amp; E-Mail-Versand<br />
+      Elgendorfer Str. 57, 56410 Montabaur, Deutschland<br />
+      Verarbeitete Daten: IP-Adressen (Server-Logs), E-Mail-Adressen (Versand der Bestätigungs-E-Mails)<br />
+      Sitz: EU (Deutschland) – kein Drittlandtransfer<br />
+      Datenschutz: <a href="https://www.ionos.de/terms-gtc/datenschutzerklaerung/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung IONOS</a>
+    </div>
+    <p>Es werden keine weiteren Auftragsverarbeiter eingesetzt. Insbesondere werden keine externen Analytics-Dienste, Werbenetzwerke oder Social-Media-Plugins verwendet.</p>
+  </div>
+
+  <!-- 8. Drittländer -->
+  <div class="legal-section" id="drittlaender">
+    <h2>8. Übermittlung in Drittländer</h2>
+    <p>
+      Es findet <strong>keine Übermittlung personenbezogener Daten in Länder außerhalb der Europäischen Union (EU) oder des Europäischen Wirtschaftsraums (EWR)</strong> statt. Sämtliche Daten werden ausschließlich auf Servern innerhalb der EU (Deutschland) verarbeitet.
+    </p>
+    
+  </div>
+
+  <!-- 9. Betroffenenrechte -->
+  <div class="legal-section" id="rechte">
+    <h2>9. Ihre Rechte als betroffene Person</h2>
+    <p>Sie haben gemäß DSGVO und DSG folgende Rechte, die Sie jederzeit gegenüber dem Verantwortlichen geltend machen können:</p>
+
+    <div class="rights-grid">
+      <div class="right-card">
+        <strong>📋 Auskunft (Art. 15 DSGVO)</strong>
+        <p>Sie können Auskunft über die zu Ihrer Person gespeicherten Daten verlangen.</p>
+      </div>
+      <div class="right-card">
+        <strong>✏️ Berichtigung (Art. 16 DSGVO)</strong>
+        <p>Sie haben das Recht auf Berichtigung unrichtiger oder Vervollständigung unvollständiger Daten.</p>
+      </div>
+      <div class="right-card">
+        <strong>🗑️ Löschung (Art. 17 DSGVO)</strong>
+        <p>Sie können die Löschung Ihrer personenbezogenen Daten verlangen, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.</p>
+      </div>
+      <div class="right-card">
+        <strong>⏸️ Einschränkung (Art. 18 DSGVO)</strong>
+        <p>Sie können die Einschränkung der Verarbeitung Ihrer Daten verlangen.</p>
+      </div>
+      <div class="right-card">
+        <strong>📦 Datenübertragbarkeit (Art. 20 DSGVO)</strong>
+        <p>Sie haben das Recht, Ihre Daten in einem strukturierten, maschinenlesbaren Format zu erhalten.</p>
+      </div>
+      <div class="right-card">
+        <strong>🚫 Widerspruch (Art. 21 DSGVO)</strong>
+        <p>Sie können der Verarbeitung auf Basis berechtigter Interessen jederzeit widersprechen.</p>
+      </div>
+      <div class="right-card">
+        <strong>↩️ Widerruf (Art. 7 Abs. 3 DSGVO)</strong>
+        <p>Eine erteilte Einwilligung kann jederzeit mit Wirkung für die Zukunft widerrufen werden.</p>
+      </div>
+      <div class="right-card">
+        <strong>⚖️ Beschwerde (Art. 77 DSGVO)</strong>
+        <p>Sie haben das Recht, bei der zuständigen Datenschutzbehörde Beschwerde einzureichen.</p>
+      </div>
+    </div>
+
+    <p style="margin-top:1.25rem;">
+      Zur Ausübung Ihrer Rechte wenden Sie sich bitte an:
+      <a href="mailto:info@ebctech.eu">info@ebctech.eu</a>.<br />
+      Wir antworten auf Anfragen innerhalb von <strong>30 Tagen</strong> gemäß Art. 12 Abs. 3 DSGVO. In begründeten Ausnahmefällen kann diese Frist um weitere 60 Tage verlängert werden.
+    </p>
+  </div>
+
+  <!-- 10. Aufsichtsbehörde -->
+  <div class="legal-section" id="behoerde">
+    <h2>10. Beschwerderecht bei der Aufsichtsbehörde</h2>
+    <p>Unbeschadet anderweitiger verwaltungsrechtlicher oder gerichtlicher Rechtsbehelfe steht Ihnen das Recht auf Beschwerde bei der zuständigen Datenschutzbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten gegen die DSGVO verstößt.</p>
+    <p>Die zuständige Aufsichtsbehörde für Österreich ist:</p>
+    <div class="legal-card">
+      <strong>Österreichische Datenschutzbehörde (DSB)</strong><br />
+      Barichgasse 40–42<br />
+      1030 Wien<br />
+      Österreich<br /><br />
+      Telefon: +43 1 52 152-0<br />
+      E-Mail: <a href="mailto:dsb@dsb.gv.at">dsb@dsb.gv.at</a><br />
+      Website: <a href="https://www.dsb.gv.at" target="_blank" rel="noopener noreferrer">www.dsb.gv.at</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ─── Footer ────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-stack">
+        <p class="footer-copy">© 2026 ebctech.eu · SolarisOne · Alle Rechte vorbehalten.</p>
+        <p class="footer-meta">Ing. Christian Ebner · Parkstraße 21/12 · 4310 Mauthausen · Österreich</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="mailto:info@ebctech.eu">Kontakt</a></li>
+        <li><a href="./impressum.html">Impressum</a></li>
+        <li><a href="./datenschutz.html" aria-current="page">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.themeTarget === theme);
+    });
+  }
+  const savedTheme = localStorage.getItem('theme');
+  setTheme(savedTheme || 'light');
+</script>
+</body>
+</html>

@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SolarisOne – Solare Energie auf einen Blick</title>
   <meta name="description" content="SolarisOne – Das elegante Wanddisplay, das Ihnen auf einen Blick zeigt, wie viel Solarstrom Sie erzeugen, verbrauchen und sparen. Für Fronius GEN24. Coming Soon." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./fonts.css" />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
@@ -49,33 +47,46 @@
 </nav>
 
 <!-- ═══════════════════════════════════ HERO ══════════════════════════════════ -->
-<section class="hero grid-bg" id="home">
+<section class="hero" id="home">
 
-  <div class="hero-badge">
-    <span>●</span>
-    <span data-lang="de" class="active">Coming Soon</span>
-    <span data-lang="en">Coming Soon</span>
-  </div>
+  <div class="hero-content">
 
-  <h1>
-    <span data-lang="de" class="active">Solare Energie –<br><span style="color:var(--accent)">auf einen Blick</span></span>
-    <span data-lang="en">Understand Your Solar Energy<br><span style="color:var(--accent)">at a Glance</span></span>
-  </h1>
+    <div class="hero-text">
+      <div class="hero-badge">
+        <span>●</span>
+        <span data-lang="de" class="active">Coming Soon</span>
+        <span data-lang="en">Coming Soon</span>
+      </div>
 
-  <p class="sub">
-    <span data-lang="de" class="active">SolarisOne ist ein wandmontiertes Echtzeit-Display, das den Energiefluss Ihrer Photovoltaikanlage übersichtlich visualisiert – kompakt, elegant und immer im Blick.</span>
-    <span data-lang="en">SolarisOne is a wall-mounted real-time display that visualises the energy flow of your photovoltaic system – compact, elegant, and always in sight.</span>
-  </p>
+      <h1>
+        <span data-lang="de" class="active">Solare Energie –<br><span class="accent-text">auf einen Blick</span></span>
+        <span data-lang="en">Understand Your Solar Energy<br><span class="accent-text">at a Glance</span></span>
+      </h1>
 
-  <div class="hero-ctas">
-    <a href="#status" class="btn-primary">
-      <span data-lang="de" class="active">Jetzt vormerken lassen</span>
-      <span data-lang="en">Join the waiting list</span>
-    </a>
-    <a href="#features" class="btn-outline">
-      <span data-lang="de" class="active">Mehr erfahren</span>
-      <span data-lang="en">Learn more</span>
-    </a>
+      <p class="sub">
+        <span data-lang="de" class="active">SolarisOne ist ein wandmontiertes Echtzeit-Display, das den Energiefluss Ihrer Photovoltaikanlage übersichtlich visualisiert – kompakt, elegant und immer im Blick.</span>
+        <span data-lang="en">SolarisOne is a wall-mounted real-time display that visualises the energy flow of your photovoltaic system – compact, elegant, and always in sight.</span>
+      </p>
+
+      <div class="hero-ctas">
+        <a href="#status" class="btn-primary">
+          <span data-lang="de" class="active">Jetzt vormerken lassen</span>
+          <span data-lang="en">Join the waiting list</span>
+        </a>
+        <a href="#features" class="btn-outline">
+          <span data-lang="de" class="active">Mehr erfahren</span>
+          <span data-lang="en">Learn more</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-device-frame">
+        <img src="./assets/solarisone1.jpg" alt="SolarisOne Wanddisplay" />
+      </div>
+    </div>
+
   </div>
 
   <div class="hero-scroll" aria-hidden="true">
@@ -165,8 +176,8 @@
         <p><span data-lang="de" class="active">Plug & Play über WLAN – keine komplizierte Verkabelung, schnell eingerichtet.</span><span data-lang="en">Plug & Play over Wi-Fi – no complex wiring, quick to set up.</span></p>
       </div>
 
-      <div class="feature-card reveal">
-        <div class="feature-icon" style="background:rgba(251,146,60,0.12);">🌐</div>
+      <div class="feature-card feature-card--compat reveal">
+        <div class="feature-icon" style="background:rgba(99,102,241,0.12);">🌐</div>
         <h3><span data-lang="de" class="active">Kompatibel mit Fronius GEN24</span><span data-lang="en">Compatible with Fronius GEN24</span></h3>
         <p><span data-lang="de" class="active">SolarisOne kommuniziert direkt mit Ihrem Fronius Wechselrichter im Heimnetz – lokal, ohne Cloud, ohne Weitergabe Ihrer Daten an Dritte.</span><span data-lang="en">SolarisOne communicates directly with your Fronius inverter on your home network – locally, without cloud, without sharing your data with third parties.</span></p>
       </div>
@@ -350,8 +361,8 @@
         <div class="consent-wrap">
           <input type="checkbox" id="consentCheckbox" name="consent" required />
           <label for="consentCheckbox">
-            <span data-lang="de" class="active">Ich stimme der Verarbeitung meiner Daten zum Zweck der Warteliste zu. Details in der <a href="https://ebctech.eu/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>.</span>
-            <span data-lang="en">I agree to the processing of my data for the waiting list. Details in the <a href="https://ebctech.eu/datenschutz/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</span>
+            <span data-lang="de" class="active">Ich stimme der Verarbeitung meiner Daten zum Zweck der Warteliste zu. Details in der <a href="./datenschutz.html" target="_blank" rel="noopener">Datenschutzerklärung</a>.</span>
+            <span data-lang="en">I agree to the processing of my data for the waiting list. Details in the <a href="./datenschutz.html" target="_blank" rel="noopener">privacy policy</a>.</span>
           </label>
         </div>
 
@@ -440,9 +451,13 @@
           <span data-lang="de" class="active">Kontakt</span>
           <span data-lang="en">Contact</span>
         </a></li>
-        <li><a href="https://ebctech.eu/impressum/" target="_blank" rel="noopener noreferrer">
+        <li><a href="./impressum.html" target="_blank" rel="noopener">
           <span data-lang="de" class="active">Impressum</span>
           <span data-lang="en">Imprint</span>
+        </a></li>
+        <li><a href="./datenschutz.html" target="_blank" rel="noopener">
+          <span data-lang="de" class="active">Datenschutz</span>
+          <span data-lang="en">Privacy</span>
         </a></li>
         <li>
           <div class="lang-switcher">

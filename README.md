@@ -1,35 +1,39 @@
 # solarisone.eu
 
-Landingpage für SolarisOne (DE/EN) mit Light/Dark-Theme und einfacher selbst gehosteter Wartelisten-Anmeldung.
+Einfach gehaltene Landingpage mit Light/Dark-Theme und einer selbst gehosteten Wartelisten-Anmeldung (Double-Opt-In).
 
-## Theme
+## Inhalt
 
-- Standard-Theme ist **Light**.
-- Theme-Auswahl (☀️/🌙) wird in `localStorage` gespeichert.
+- `index.html` – Hauptseite (DE/EN) mit Theme-Schalter.
+- `signup.php` – verarbeitet Wartelisten-Anmeldungen und versendet Bestätigungs-E-Mails.
+- `confirm.php` – validiert Tokens aus der Bestätigungs-Mail.
+- `datenschutz.html` / `impressum.html` – rechtliche Seiten.
+- `styles.css`, `fonts.css` – Styling.
 
-## Waitlist (PHP mit Double-Opt-In, ohne JSON-Speicherung)
+## Installation
 
-Die Anmeldung läuft über `signup.php` auf demselben Server.
+1. Auf einem Webserver mit PHP (z. B. IONOS/Plesk) deployen.
+2. Sicherstellen, dass `mail()` funktioniert (Server-MTA/Relay).
+3. In der Server-Umgebung die Variable `WAITLIST_SIGNING_KEY` setzen (starkes Secret).
 
-### Ablauf
+## Wartelisten-Workflow (Double-Opt-In)
 
-1. Nutzer sendet E-Mail + Einwilligung über das Formular.
-2. `signup.php` erzeugt ein Token und sendet einen Bestätigungslink per E-Mail.
-3. Nutzer klickt den Link (`confirm.php`).
-4. Erst dann wird `info@ebctech.eu` informiert.
+1. Nutzer meldet sich über `index.html` an.
+2. `signup.php` generiert ein Token und verschickt einen Bestätigungslink per E-Mail.
+3. Nutzer bestätigt über `confirm.php`.
+4. Es wird erst nach Bestätigung eine Benachrichtigung versendet.
 
-Es werden dabei keine `waitlist_*.json` Dateien gespeichert.
+> ⚠️ Es werden **keine** `waitlist_*.json` Dateien auf dem Server gespeichert.
 
-### Voraussetzungen auf IONOS/Plesk
+## Datenschutz
 
-- PHP aktiviert.
-- Mailversand per `mail()` funktional (über Server-MTA/Relay).
-- Environment Variable `WAITLIST_SIGNING_KEY` gesetzt (starkes Secret für den Bestätigungslink), z.B. in Plesk unter **PHP-Einstellungen** oder **Apache & nginx Settings**.
-- SPF/DKIM/DMARC für die Domain sauber eingerichtet.
+- Die Anmeldung basiert auf einer freiwilligen Einwilligung.
+- Die Datenschutzerklärung (`datenschutz.html`) beschreibt den Prozess.
 
-### DSGVO-Hinweis
+## Lokale Entwicklung
 
-- Die Form enthält eine verpflichtende Einwilligung.
-- Datenschutzerklärung sollte den Prozess transparent beschreiben.
-- Diese Implementierung nutzt Double-Opt-In.
-- Es erfolgt keine JSON-Persistenz von Wartelistendaten auf dem Server.
+Für lokale Tests kann ein SMTP-Relay (z. B. `smtp4dev` oder `MailHog`) verwendet werden.
+
+---
+
+© SolarisOne
