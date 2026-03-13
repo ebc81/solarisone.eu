@@ -34,6 +34,12 @@
           <button class="lang-btn" onclick="setLang('en')" data-lang-target="en">🇬🇧 EN</button>
         </div>
       </li>
+      <li>
+        <div class="theme-switcher">
+          <button class="theme-btn active" type="button" onclick="setTheme('light')" data-theme-target="light" aria-label="Helles Theme">☀️</button>
+          <button class="theme-btn" type="button" onclick="setTheme('dark')" data-theme-target="dark" aria-label="Dunkles Theme">🌙</button>
+        </div>
+      </li>
     </ul>
 
     <button class="ham" id="hamBtn" aria-label="Menu" onclick="toggleNav()">
@@ -341,6 +347,19 @@
         <input type="email" id="emailInput" name="email" required
           placeholder="ihre@email.de"
           aria-label="E-Mail-Adresse" />
+        <div class="consent-wrap">
+          <input type="checkbox" id="consentCheckbox" name="consent" required />
+          <label for="consentCheckbox">
+            <span data-lang="de" class="active">Ich stimme der Verarbeitung meiner Daten zum Zweck der Warteliste zu. Details in der <a href="https://ebctech.eu/datenschutz/" target="_blank" rel="noopener noreferrer">Datenschutzerklärung</a>.</span>
+            <span data-lang="en">I agree to the processing of my data for the waiting list. Details in the <a href="https://ebctech.eu/datenschutz/" target="_blank" rel="noopener noreferrer">privacy policy</a>.</span>
+          </label>
+        </div>
+
+        <div class="hp-field" aria-hidden="true">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
+
         <button type="submit" class="btn-primary">
           <span data-lang="de" class="active">Jetzt eintragen</span>
           <span data-lang="en">Notify me</span>
@@ -349,8 +368,14 @@
 
       <div class="form-success" id="formSuccess">
         <span>✅</span>
-        <span data-lang="de" class="active">Danke! Wir melden uns, sobald SolarisOne verfügbar ist.</span>
-        <span data-lang="en">Thank you! We'll notify you as soon as SolarisOne is available.</span>
+        <span data-lang="de" class="active">Bitte prüfen Sie Ihr E-Mail-Postfach und bestätigen Sie die Anmeldung. Erst danach sind Sie auf der Warteliste.</span>
+        <span data-lang="en">Please check your inbox and confirm your signup. You are added to the waiting list only after confirmation.</span>
+      </div>
+
+      <div class="form-error" id="formError" role="alert" aria-live="polite">
+        <span>⚠️</span>
+        <span data-lang="de" class="active">Eintrag momentan nicht möglich. Bitte versuchen Sie es in wenigen Minuten erneut.</span>
+        <span data-lang="en">Signup is currently unavailable. Please try again in a few minutes.</span>
       </div>
 
       <div class="progress-wrap">
@@ -425,6 +450,12 @@
             <button class="lang-btn" onclick="setLang('en')" data-lang-target="en">🇬🇧 EN</button>
           </div>
         </li>
+        <li>
+          <div class="theme-switcher">
+            <button class="theme-btn active" type="button" onclick="setTheme('light')" data-theme-target="light" aria-label="Helles Theme">☀️</button>
+            <button class="theme-btn" type="button" onclick="setTheme('dark')" data-theme-target="dark" aria-label="Dunkles Theme">🌙</button>
+          </div>
+        </li>
       </ul>
     </div>
   </div>
@@ -434,6 +465,7 @@
 <script>
   // ── Language switcher ──────────────────────────────────────────────────────
   let currentLang = 'de';
+  const WAITLIST_ENDPOINT = '/signup.php';
 
   function setLang(lang) {
     currentLang = lang;
@@ -460,6 +492,21 @@
     }
   }
 
+  // ── Theme switcher ─────────────────────────────────────────────────────────
+  function setTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem('theme', theme);
+
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.themeTarget === theme);
+    });
+  }
+
+  function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    setTheme(savedTheme || 'light');
+  }
+
   // ── Mobile nav ─────────────────────────────────────────────────────────────
   function toggleNav() {
     document.getElementById('navLinks').classList.toggle('open');
@@ -469,13 +516,55 @@
   }
 
   // ── Signup form ────────────────────────────────────────────────────────────
-  function handleSignup(e) {
+  async function handleSignup(e) {
     e.preventDefault();
+
     const form = e.target;
     const success = document.getElementById('formSuccess');
-    form.style.display = 'none';
-    success.classList.add('show');
+    const error = document.getElementById('formError');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    success.classList.remove('show');
+    error.classList.remove('show');
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch(WAITLIST_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          email: String(formData.get('email') || '').trim(),
+          consent: formData.get('consent') === 'on',
+          website: String(formData.get('website') || '').trim(),
+          lang: currentLang
+        })
+      });
+
+      if (!response.ok) {
+        const json = await response.json().catch(() => null);
+        console.warn('Signup request failed', response.status, json);
+        error.textContent = json?.error ? `Fehler: ${json.error}` : 'Eintrag momentan nicht möglich. Bitte versuchen Sie es in wenigen Minuten erneut.';
+        error.classList.add('show');
+        return;
+      }
+
+      form.reset();
+      form.style.display = 'none';
+      success.classList.add('show');
+    } catch (err) {
+      console.error('Signup request failed', err);
+      error.textContent = 'Eintrag momentan nicht möglich. Bitte versuchen Sie es in wenigen Minuten erneut.';
+      error.classList.add('show');
+    } finally {
+      submitBtn.disabled = false;
+    }
   }
+
+  initTheme();
 
   // ── Scroll reveal ──────────────────────────────────────────────────────────
   const revealObserver = new IntersectionObserver((entries) => {
